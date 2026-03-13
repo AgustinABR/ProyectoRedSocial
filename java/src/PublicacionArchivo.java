@@ -1,3 +1,3 @@
-public class PublicacionArchivo {
+public class PublicacionArchivo extends Publicacion {
     
 }

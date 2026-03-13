@@ -1,3 +1,3 @@
-public class AlgoritmoInteres {
+public class AlgoritmoInteres implements AlgoritmoPresentacion {
     
 }
