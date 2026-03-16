@@ -5,7 +5,7 @@ public class Usuario {
     private String nombre;
     private String contrasena;
     private ArrayList<Usuario> seguidos;
-    private ArrayList<String> intereses;
+    private ArrayList<Etiqueta> intereses;
 
     public Usuario(String nombre, String contrasena) {
         this.nombre = nombre;
@@ -26,7 +26,7 @@ public class Usuario {
         return seguidos;
     }
 
-    public ArrayList<String> getIntereses() {
+    public ArrayList<Etiqueta> getIntereses() {
         return intereses;
     }
 
@@ -36,7 +36,7 @@ public class Usuario {
         }
     }
 
-    public void agregarInteres(String interes) {
+    public void agregarInteres(Etiqueta interes) {
         intereses.clear();
         intereses.add(interes);
     }

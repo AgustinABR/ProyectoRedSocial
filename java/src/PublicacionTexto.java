@@ -4,7 +4,7 @@ public class PublicacionTexto extends Publicacion {
 
     private String texto;
 
-    public PublicacionTexto(Usuario autor, String texto, ArrayList<String> etiquetas) {
+    public PublicacionTexto(Usuario autor, String texto, ArrayList<Etiqueta> etiquetas) {
         super(autor, etiquetas);
         this.texto = texto;
     }

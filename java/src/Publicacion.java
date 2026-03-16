@@ -4,10 +4,10 @@ import java.util.ArrayList;
 public abstract class Publicacion {
 
     protected Usuario autor;
-    protected ArrayList<String> etiquetas;
+    protected ArrayList<Etiqueta> etiquetas;
     protected LocalDateTime fecha;
 
-    public Publicacion(Usuario autor, ArrayList<String> etiquetas) {
+    public Publicacion(Usuario autor, ArrayList<Etiqueta> etiquetas) {
         this.autor = autor;
         this.etiquetas = etiquetas;
         this.fecha = LocalDateTime.now();
@@ -17,7 +17,7 @@ public abstract class Publicacion {
         return autor;
     }
 
-    public ArrayList<String> getEtiquetas() {
+    public ArrayList<Etiqueta> getEtiquetas() {
         return etiquetas;
     }
 

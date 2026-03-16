@@ -1,12 +1,12 @@
-import java.util.ArrayList;
 import java.awt.Desktop;
 import java.io.File;
+import java.util.ArrayList;
 
 public class PublicacionArchivo extends Publicacion {
 
     private String ruta;
 
-    public PublicacionArchivo(Usuario autor, String ruta, ArrayList<String> etiquetas) {
+    public PublicacionArchivo(Usuario autor, String ruta, ArrayList<Etiqueta> etiquetas) {
         super(autor, etiquetas);
         this.ruta = ruta;
     }

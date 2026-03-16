@@ -1,3 +1,6 @@
+import java.util.List;
+
 public interface AlgoritmoPresentacion {
-    //metodo obtener contenido
+    List<Publicacion> obtenerContenido(Usuario usuario, List<Publicacion> publicaciones);
+
 }

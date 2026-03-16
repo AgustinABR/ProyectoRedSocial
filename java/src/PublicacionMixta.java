@@ -1,14 +1,14 @@
 
-import java.util.ArrayList;
 import java.awt.Desktop;
 import java.io.File;
+import java.util.ArrayList;
 
 public class PublicacionMixta extends Publicacion {
 
     private String texto;
     private String ruta;
 
-    public PublicacionMixta(Usuario autor, String texto, String ruta, ArrayList<String> etiquetas) {
+    public PublicacionMixta(Usuario autor, String texto, String ruta, ArrayList<Etiqueta> etiquetas) {
         super(autor, etiquetas);
         this.texto = texto;
         this.ruta = ruta;
