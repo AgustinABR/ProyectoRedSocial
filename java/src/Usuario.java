@@ -1,36 +1,43 @@
+import java.util.ArrayList;
+
 public class Usuario {
-    private AlgoritmoPresentacion algoritmoSeleccionado;
+
     private String nombre;
-    private String contrasenia;
+    private String contrasena;
+    private ArrayList<Usuario> seguidos;
+    private ArrayList<String> intereses;
 
-
-    public Usuario(String nombre, String contrasenia, AlgoritmoPresentacion algoritmoSeleccionado) {
-        this.algoritmoPresentacion = setAlgoritmoSeleccionado(algoritmoSeleccionado);
-    }
-
-    public AlgoritmoPresentacion getAlgoritmoSeleccionado() {
-        return algoritmoSeleccionado;
-    }
-
-    public void setAlgoritmoSeleccionado(AlgoritmoPresentacion algoritmoSeleccionado) {
-        this.algoritmoSeleccionado = algoritmoSeleccionado;
+    public Usuario(String nombre, String contrasena) {
+        this.nombre = nombre;
+        this.contrasena = contrasena;
+        this.seguidos = new ArrayList<>();
+        this.intereses = new ArrayList<>();
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public String getContrasenia() {
-        return contrasenia;
+    public ArrayList<Usuario> getSeguidos() {
+        return seguidos;
     }
 
-    public void setContrasenia(String contrasenia) {
-        this.contrasenia = contrasenia;
+    public ArrayList<String> getIntereses() {
+        return intereses;
     }
 
+    public void seguirUsuario(Usuario u) {
+        if (!seguidos.contains(u)) {
+            seguidos.add(u);
+        }
+    }
 
+    public void agregarInteres(String interes) {
+        intereses.clear();
+        intereses.add(interes);
+    }
 }
