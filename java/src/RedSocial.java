@@ -24,9 +24,9 @@ public class RedSocial {
         cargarDatosPrueba();
     }
 
-
     public void iniciar() {
         while (true) {
+            System.out.println("\n--- RED SOCIAL ---");
             System.out.println("1. Login");
             System.out.println("2. Registro");
 
@@ -75,12 +75,12 @@ public class RedSocial {
         }
     }
 
-
     private void menu() {
         int op;
 
         do {
-            System.out.println("\n1. Ver contenido");
+            System.out.println("\n--- MENÚ PRINCIPAL ---");
+            System.out.println("1. Ver contenido");
             System.out.println("2. Crear contenido");
             System.out.println("3. Configuración");
             System.out.println("4. Logout");
@@ -98,7 +98,6 @@ public class RedSocial {
 
         sesion = null;
     }
-
 
     private void verContenido() {
         List<Publicacion> feed = sesion.getAlgoritmo()
@@ -175,7 +174,6 @@ public class RedSocial {
         System.out.println("Publicación creada correctamente.");
     }
 
-
     private void configuracion() {
         System.out.println("Selecciona algoritmo de presentación:");
         System.out.println("1. Intereses");
@@ -202,13 +200,19 @@ public class RedSocial {
         usuarios.add(u1);
         usuarios.add(u2);
 
-        ArrayList<Etiqueta> et1 = new ArrayList<>();
-        et1.add(Etiqueta.MUSICA);
+        ArrayList<Etiqueta> etMusica = new ArrayList<>();
+        etMusica.add(Etiqueta.MUSICA);
 
-        ArrayList<Etiqueta> et2 = new ArrayList<>();
-        et2.add(Etiqueta.VIAJES);
+        ArrayList<Etiqueta> etViajes = new ArrayList<>();
+        etViajes.add(Etiqueta.VIAJES);
 
-        publicaciones.add(new PublicacionTexto(u1, "Hola mundo desde Java", et1));
-        publicaciones.add(new PublicacionTexto(u2, "Me gusta viajar mucho", et2));
+        ArrayList<Etiqueta> etTecnologia = new ArrayList<>();
+        etTecnologia.add(Etiqueta.TECNOLOGIA);
+
+        publicaciones.add(new PublicacionTexto(u1, "Hola mundo desde Java", etMusica));
+        publicaciones.add(new PublicacionTexto(u2, "Me gusta viajar mucho", etViajes));
+
+        publicaciones.add(new PublicacionArchivo(u1, "java/archivosPrueba/bmw.jpg", etTecnologia));
+        publicaciones.add(new PublicacionMixta(u2, "Documento + imagen", "java/archivosPrueba/textoImagen.pdf", etTecnologia));
     }
 }
