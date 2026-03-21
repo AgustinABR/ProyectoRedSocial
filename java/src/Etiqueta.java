@@ -1,3 +1,8 @@
+/**
+* @author 	Lourdes Molina Caselles
+* @author Agustín Muriel Sánchez
+*/
+
 public enum Etiqueta {
     TECNOLOGIA,
     VIAJES,

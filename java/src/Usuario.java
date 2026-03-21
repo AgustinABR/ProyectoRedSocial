@@ -1,3 +1,8 @@
+/**
+* @author 	Lourdes Molina Caselles
+* @author Agustín Muriel Sánchez
+*/
+
 import java.util.ArrayList;
 
 public class Usuario {

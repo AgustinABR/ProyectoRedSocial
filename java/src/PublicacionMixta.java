@@ -1,3 +1,7 @@
+/**
+* @author 	Lourdes Molina Caselles
+* @author Agustín Muriel Sánchez
+*/
 
 import java.awt.Desktop;
 import java.io.File;
